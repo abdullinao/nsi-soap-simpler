@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) throws IOException {
 
-        System.out.println("0.0.1");
+        System.out.println("version: 1.1-SNAPSHOT");
         System.out.println("Инструкция:" +
                 "\n*Операции,адреса должны быть без пробелов" +
                 "\n*Файл с гуидами должен быть в папке с приложением, имя файлов guids.txt" +
