@@ -22,7 +22,7 @@ public class eh_requestGenerator {
             SOAPMessage soapResponse = soapConnection.call(createSOAPRequest(soapAction), soapEndpointUrl);
 
             // Print the SOAP Response
-            System.out.println("SOAP запрос отправленный в ивентхендлер:");
+            System.out.println("Ответ:");
             soapResponse.writeTo(System.out);
             System.out.println();
 
@@ -45,7 +45,7 @@ public class eh_requestGenerator {
         soapMessage.saveChanges();
 
         /* Print the request message, just for debugging purposes */
-        System.out.println("Request SOAP Message:");
+        System.out.println("SOAP запрос отправленный в ивентхендлер:");
         soapMessage.writeTo(System.out);
         System.out.println("\n");
 
