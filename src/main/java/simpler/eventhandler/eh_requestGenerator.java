@@ -22,13 +22,13 @@ public class eh_requestGenerator {
             SOAPMessage soapResponse = soapConnection.call(createSOAPRequest(soapAction), soapEndpointUrl);
 
             // Print the SOAP Response
-            System.out.println("Response SOAP Message:");
+            System.out.println("SOAP запрос отправленный в ивентхендлер:");
             soapResponse.writeTo(System.out);
             System.out.println();
 
             soapConnection.close();
         } catch (Exception e) {
-            System.err.println("\nError occurred while sending SOAP Request to Server!\nMake sure you have the correct endpoint URL and SOAPAction!\n");
+            System.err.println("\nОшибка отправки запроса на ивентхендлер!\nПроверьте правильность адреса и доступность сервиса!\n");
             e.printStackTrace();
         }
     }

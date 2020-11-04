@@ -2,11 +2,12 @@ package simpler;
 
 import simpler.eventhandler.*;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 
 public class main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("0.0.1");
         System.out.println("Инструкция:" +
