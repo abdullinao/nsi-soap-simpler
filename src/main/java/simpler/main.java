@@ -1,6 +1,6 @@
 package simpler;
 
-import simpler.eventhandler.eh_requestgenerator;
+import simpler.eventhandler.*;
 
 import java.util.Scanner;
 
@@ -17,14 +17,14 @@ public class main {
 
         System.out.println("выберите вебсервис для работы: " +
                 "\n1 - NSI_EVENTHANDLER - отправка уфос-пим" +
-                "\n2- NSI_DATAMART - выгрузка записей ");
+                "\n2 - NSI_DATAMART - выгрузка записей ");
 
         Scanner sc = new Scanner(System.in);
         int choose = sc.nextInt();
 
         switch (choose) {
             case 1:
-                eh_requestgenerator.eh_initialize();
+                eh_initializer.eh_initialize();
                 break;
 
             case 2:
