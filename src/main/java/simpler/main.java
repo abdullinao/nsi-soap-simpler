@@ -5,6 +5,12 @@ import simpler.eventhandler.*;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * todo
+ * вывести отправку и обработку в соап в отдельный класс, оставить генерацию самого тела
+ * в пакетах целевых вебсервисов
+ *
+ */
 
 public class main {
     public static void main(String[] args) throws IOException {

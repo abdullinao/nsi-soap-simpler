@@ -34,7 +34,7 @@ public class eh_requestGenerator {
     }
 
     private static SOAPMessage createSOAPRequest(String soapAction) throws Exception {
-        MessageFactory messageFactory = MessageFactory.newInstance();
+        MessageFactory messageFactory = MessageFactory.newInstance(/*SOAPConstants.SOAP_1_2_PROTOCOL */);
         SOAPMessage soapMessage = messageFactory.createMessage();
 
         createSoapEnvelope(soapMessage);

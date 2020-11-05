@@ -29,10 +29,13 @@ public class eh_initializer {
         Scanner sc = new Scanner(System.in);
         System.out.println("адрес эвентхендлера: ");
         endpoint = sc.nextLine();
-        System.out.println("document-type(REF_UBPandNUBP,REF_PersAccount...): ");
+
+        System.out.println("document-type(REF_UBPandNUBP, REF_PersAccount...): ");
         dict_typeString = sc.nextLine();
+
         System.out.println("document-state(ACTIVE/ARCHIVE...): ");
         stateString = sc.nextLine();
+
         System.out.println("operation-code(CreateRecord/toArchive...): ");
         event = sc.nextLine();
 
