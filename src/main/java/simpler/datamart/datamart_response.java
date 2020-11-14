@@ -1,4 +1,4 @@
-package simpler.datamart;
-
-public class datamart_response {
-}
+//package simpler.datamart;
+//
+//public class datamart_response {
+//}

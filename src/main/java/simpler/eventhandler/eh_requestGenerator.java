@@ -12,7 +12,7 @@ public class eh_requestGenerator {
 
     static void callSoapWebService(String soapEndpointUrl, String soapAction, String guid) {
         try {
-            guidString=guid;
+            guidString = guid;
 
             // Create SOAP Connection
             SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
@@ -23,12 +23,20 @@ public class eh_requestGenerator {
 
             // Print the SOAP Response
             System.out.println("Ответ:");
-            soapResponse.writeTo(System.out);
+            try {
+                soapResponse.writeTo(System.out);
+            } catch (NullPointerException nul) {
+                System.out.println("\nСервис не дал ответ на соап запрос.");
+            }
             System.out.println();
 
             soapConnection.close();
         } catch (Exception e) {
-            System.err.println("\nОшибка отправки запроса на ивентхендлер!\nПроверьте правильность адреса и доступность сервиса!\n");
+            System.err.println("\n" +
+                    "\n***************" +
+                    "\nОшибка отправки запроса на ивентхендлер!\nПроверьте правильность адреса и доступность сервиса!" +
+                    "\nЕсли ошибок нет и инстансы создались скиньте ошибку ниже в скайп alexey.abdullin: " +
+                    "\n***************");
             e.printStackTrace();
         }
     }
@@ -45,7 +53,7 @@ public class eh_requestGenerator {
         soapMessage.saveChanges();
 
         /* Print the request message, just for debugging purposes */
-        System.out.println("SOAP запрос отправленный в ивентхендлер:");
+        System.out.println("SOAP запрос для вебсервиса:\n");
         soapMessage.writeTo(System.out);
         System.out.println("\n");
 

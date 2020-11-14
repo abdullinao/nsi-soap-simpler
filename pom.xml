@@ -6,7 +6,7 @@
 
     <groupId>ru.otr</groupId>
     <artifactId>nsi-soap-simpler</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>build-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
